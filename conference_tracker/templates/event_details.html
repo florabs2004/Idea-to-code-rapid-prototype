@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.title }} - Conference Event Tracker{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event Details</li>
+            </ol>
+        </nav>
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">{{ event.title }}</h1>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-sm-4 fw-bold">Presenter:</div>
+                    <div class="col-sm-8">{{ event.presenter }}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-4 fw-bold">Date & Time:</div>
+                    <div class="col-sm-8">{{ event.event_date }} at {{ event.start_time }}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-4 fw-bold">Location:</div>
+                    <div class="col-sm-8 text-primary">{{ event.location }}</div>
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <h5 class="fw-bold">Description</h5>
+                    <p class="lead">{{ event.description }}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
