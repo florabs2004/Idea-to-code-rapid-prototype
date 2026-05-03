@@ -28,7 +28,7 @@ The custom commands for this project are defined in the `.gemini/commands` direc
 
 1. **Navigate to the application folder:**
    ```bash
-   cd Event_track
+   cd Event_tracker
    ```
 
 2. **Setup virtual environment:**

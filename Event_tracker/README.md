@@ -17,7 +17,7 @@ A simple web application to track conference events, add new ones, and view list
 
 1. **Navigate to the project folder:**
    ```bash
-   cd Event_track
+   cd Event_tracker
    ```
 
 2. **Create a virtual environment:**
